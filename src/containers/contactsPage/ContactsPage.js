@@ -3,7 +3,6 @@ import { ContactForm } from "../../components/contactForm/ContactForm"
 import { TileList } from "../../components/tileList/TileList"
 
 export const ContactsPage = (props) => {
-  console.log(props.contacts)
   /*
   Define state variables for 
   contact info and duplicate check
@@ -28,14 +27,21 @@ export const ContactsPage = (props) => {
     <div>
       <section>
         <h2 onClick={handleSubmit}>Add Contact</h2> 
-        <ContactForm></ContactForm>
+        <ContactForm 
+        addContact={props.addContact}
+        />
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList
-         contacts={props.contacts}
-         />
+        <div style={{display: "flex", flexWrap: "wrap"}}>
+          {props.contacts.map((contact,index) => {
+            return(<TileList 
+              contact={contact}
+              key={index}
+            />)
+          })}
+        </div>
       </section>
     </div>
   );

@@ -26,7 +26,7 @@ export const ContactForm = (props) => {
       setEmail("")
       console.log(contact)
     }
-    // props.addContact(contact)
+    props.addContact(contact)
   }
 
   const handleFirstName = (e) => {
