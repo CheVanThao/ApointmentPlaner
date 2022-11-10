@@ -5,12 +5,7 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  const [contacts, setContacts] = useState([{
-    firstName: "Che",
-    lastName: "Van Thao",
-    email: "chevanthao96@gmail.com",
-    phone: "090-2533-9116"
-  }])
+  const [contacts, setContacts] = useState([])
   const [appointments, setAppointments] = useState([])
   /*
   Define state variables for 
