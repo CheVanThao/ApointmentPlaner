@@ -1,6 +1,8 @@
 import React from "react";
+import { ContactForm } from "../../components/contactForm/ContactForm"
+import { TileList } from "../../components/tileList/TileList"
 
-export const ContactsPage = () => {
+export const ContactsPage = ({contacts, addContact}) => {
   /*
   Define state variables for 
   contact info and duplicate check
@@ -8,6 +10,8 @@ export const ContactsPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    addContact(e.target.value)
+    alert("clicked")
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
@@ -22,11 +26,13 @@ export const ContactsPage = () => {
   return (
     <div>
       <section>
-        <h2>Add Contact</h2> 
+        <h2 onClick={handleSubmit}>Add Contact</h2> 
+        <ContactForm></ContactForm>
       </section>
       <hr />
       <section>
         <h2>Contacts</h2>
+        <TileList></TileList>
       </section>
     </div>
   );
