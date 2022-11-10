@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./ContactForm.css"
 
 export const ContactForm = (props) => {
+  console.log(props)
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [phone, setPhone] = useState("")
@@ -26,7 +27,7 @@ export const ContactForm = (props) => {
       setEmail("")
       console.log(contact)
     }
-    // props.setContacts(contact)
+    // props.addContact(contact)
   }
 
   const handleFirstName = (e) => {
