@@ -1,5 +1,4 @@
 import React from "react";
-import { ContactPicker } from "../contactPicker/ContactPicker";
 import styles from "../appointmentForm/AppointmentForm.module.scss"
 
 export const AppointmentForm = ({
@@ -51,7 +50,7 @@ export const AppointmentForm = ({
             >
               Submit
           </button>
-        </div>
+        </div>  
       </form>
     </div>
   );

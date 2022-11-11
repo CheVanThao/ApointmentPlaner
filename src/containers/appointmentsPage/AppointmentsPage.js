@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
+import { ContactPicker } from "../../components/contactPicker/ContactPicker";
 
 export const AppointmentsPage = (props) => {
   /*
@@ -19,7 +20,7 @@ export const AppointmentsPage = (props) => {
   };
 
   return (
-    <div>
+    <div style={{width: "50%"}}>
       <section>
         <h2>Add Appointment</h2>
         <AppointmentForm 
@@ -38,6 +39,7 @@ export const AppointmentsPage = (props) => {
       <hr />
       <section>
         <h2>Appointments</h2>
+        <ContactPicker />
       </section>
     </div>
   );
