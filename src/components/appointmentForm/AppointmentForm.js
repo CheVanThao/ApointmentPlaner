@@ -18,7 +18,7 @@ export const AppointmentForm = ({
     const [month, day, year] = new Date()
       .toLocaleDateString("en-US")
       .split("/");
-    return `${year}/${month.padStart(2, "0")}/${day.padStart(2, "0")}`;
+    return `${day.padStart(2, "0")}/${month.padStart(2, "0")}/${year}`;
   };
 
   const handleTitle = (e) => {
